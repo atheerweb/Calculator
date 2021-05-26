@@ -126,13 +126,14 @@ input {
 .ckeys {
   background-color: var(--orange-key-background);
   width: 46px;
-  height: 46px;
+  height: 40px;
   margin: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0px 4px var(--orange-key-shadow);
+  padding-top: 6px;
 }
 .rande__btns {
   display: flex;
@@ -151,49 +152,91 @@ input {
   justify-content: center;
   align-items: center;
   width: 110px;
-  height: 55px;
+  height: 49px;
   background-color: var(--redekey-background);
   color: var(--text-White);
   border-radius: 5px;
   box-shadow: 0px 4px var(--redekey-shadow);
+  padding-top: 6px;
 }
 .ckeysss {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 110px;
-  height: 55px;
+  height: 49px;
   background-color: var(--Redkey-background);
   color: var(--text-White);
   margin-left: 15px;
   border-radius: 5px;
-  box-shadow: 0px 4px var(--red-shadow)
+  box-shadow: 0px 4px var(--red-shadow);
+  padding-top: 6px;
 }
 @media (min-width: 360px) {
   .ckeys {
     width: 56px;
-    height: 56px;
+    height: 50px;
   }
   .ckeyss {
     width: 130px;
-    height: 60px;
+    height: 54px;
   }
   .ckeysss {
     width: 130px;
-    height: 60px;
+    height: 54px;
   }
 }
 @media (min-width: 375px) {
   .ckeys {
     width: 59px;
-    height: 59px;
+    height: 53px;
   }
   .ckeyss {
     width: 135px;
-    height: 60px;
+    height: 54px;
   }
   .ckeysss {
     width: 135px;
-    height: 60px;
+    height: 54px;
+  }
+}
+@media (min-width: 768px) {
+  .title__theme {
+    width: 550px;
+    margin: auto;
+  }
+  #calc__screen {
+    margin: auto;
+    width: 550px;
+    height: 119px;
+  }
+  .keypad {
+    width: 513px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .ckeys {
+    width: 102px;
+    border-radius: 10px;
+    margin: 12px;
+    font-size: 1.8rem;
+  }
+  #del {
+    font-size: 1.08rem
+  }
+  .ckeyss {
+    width: 230px;
+    height: 54px;
+    border-radius: 10px;
+  }
+  .ckeysss {
+    width: 230px;
+    height: 54px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+  #calc__no {
+    font-size: 2.65rem;
+    padding-top: 35px;
   }
 }
