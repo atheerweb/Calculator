@@ -114,7 +114,7 @@ input {
   flex-direction: column;
   border-radius: 10px;
   margin-top: 20px;
-  height:auto;
+  height: auto;
 }
 .main__btns {
   color: var(--Very-dark-grayish-blue);
@@ -122,17 +122,17 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
 }
 .ckeys {
   background-color: var(--orange-key-background);
-  width: 55px;
-  height: 55px;
-  margin: 10px;
+  width: 46px;
+  height: 46px;
+  margin: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  box-shadow: 0px 4px var(--orange-key-shadow);
 }
 .rande__btns {
   display: flex;
@@ -144,25 +144,56 @@ input {
 #del {
   color: var(--text-White);
   background-color: var(--redekey-background);
+  box-shadow: 0px 4px var(--redekey-shadow);
 }
 .ckeyss {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px;
-  height: 60px;
+  width: 110px;
+  height: 55px;
   background-color: var(--redekey-background);
   color: var(--text-White);
   border-radius: 5px;
+  box-shadow: 0px 4px var(--redekey-shadow);
 }
 .ckeysss {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px;
-  height: 60px;
+  width: 110px;
+  height: 55px;
   background-color: var(--Redkey-background);
   color: var(--text-White);
-  margin-left: 10px;
+  margin-left: 15px;
   border-radius: 5px;
+  box-shadow: 0px 4px var(--red-shadow)
+}
+@media (min-width: 360px) {
+  .ckeys {
+    width: 56px;
+    height: 56px;
+  }
+  .ckeyss {
+    width: 130px;
+    height: 60px;
+  }
+  .ckeysss {
+    width: 130px;
+    height: 60px;
+  }
+}
+@media (min-width: 375px) {
+  .ckeys {
+    width: 59px;
+    height: 59px;
+  }
+  .ckeyss {
+    width: 135px;
+    height: 60px;
+  }
+  .ckeysss {
+    width: 135px;
+    height: 60px;
+  }
 }
