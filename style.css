@@ -134,6 +134,7 @@ input {
   border-radius: 5px;
   box-shadow: 0px 4px var(--orange-key-shadow);
   padding-top: 6px;
+  cursor: pointer;
 }
 .rande__btns {
   display: flex;
