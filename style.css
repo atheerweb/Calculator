@@ -11,6 +11,24 @@
   --Very-dark-grayish-blue: hsl(221, 14%, 31%);
   --text-White: white;
 }
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+    background-color: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:rgba(130, 130, 130, 0.8);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -18,6 +36,7 @@ body {
   background-color: var(--main-background);
   padding: 0 20px 0 20px;
   font-family: "Spartan", sans-serif;
+  transition: all 350ms ease;
 }
 .attribution {
   font-size: 11px;
@@ -32,6 +51,7 @@ body {
   align-items: center;
   color: var(--text-White);
   font-weight: 700;
+  transition: all 350ms ease;
 }
 .theme {
   display: flex;
@@ -46,6 +66,7 @@ body {
   background-color: var(--items-background);
   border-radius: 35px;
   bottom: 8px;
+  transition: all 350ms ease;
 }
 .colors {
   display: flex;
@@ -63,7 +84,14 @@ body {
   font-size: 0.6rem;
   width: 76px;
 }
-.switch::before {
+.theme1 , .theme2 , .theme3 {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  transition: all 350ms ease;
+}
+.theme1{
+  opacity: 1;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -72,14 +100,36 @@ body {
   height: 14px;
   width: 14px;
   background-color: var(--Redkey-background);
-  content: "";
   border-radius: 35px;
+  transition: all 350ms ease;
 }
-input {
+.theme2{
   opacity: 0;
-  width: 10px;
-  height: 10px;
+  position: absolute;
+  top: 5px;
+  left: 24px;
+  right: 0;
+  bottom: 0;
+  height: 14px;
+  width: 14px;
+  background-color: var(--Redkey-background);
+  border-radius: 35px;
+  transition: all 350ms ease;
 }
+.theme3{
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  left: 43px;
+  right: 0;
+  bottom: 0;
+  height: 14px;
+  width: 14px;
+  background-color: var(--Redkey-background);
+  border-radius: 35px;
+  transition: all 350ms ease;
+}
+
 #title {
   font-size: 1.75rem;
 }
@@ -98,12 +148,17 @@ input {
   width: 100%;
   height: 90px;
   border-radius: 10px;
+  overflow:scroll;
+  overflow-y: hidden;
+  transition: all 350ms ease;
 }
 #calc__no {
   text-align: right;
   padding-right: 30px;
   color: var(--text-White);
-  padding-top: 25px;
+  position: relative;
+  top: 5px;
+  transition: all 350ms ease;
 }
 .keypad {
   display: flex;
@@ -115,6 +170,7 @@ input {
   border-radius: 10px;
   margin-top: 20px;
   height: auto;
+  transition: all 350ms ease;
 }
 .main__btns {
   color: var(--Very-dark-grayish-blue);
@@ -122,6 +178,7 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  transition: all 350ms ease;
 }
 .ckeys {
   background-color: var(--orange-key-background);
@@ -135,6 +192,21 @@ input {
   box-shadow: 0px 4px var(--orange-key-shadow);
   padding-top: 6px;
   cursor: pointer;
+  transition: all 350ms ease;
+}
+.ckeyso {
+  background-color: var(--orange-key-background);
+  width: 46px;
+  height: 40px;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px var(--orange-key-shadow);
+  padding-top: 6px;
+  cursor: pointer;
+  transition: all 350ms ease;
 }
 .rande__btns {
   display: flex;
@@ -147,6 +219,8 @@ input {
   color: var(--text-White);
   background-color: var(--redekey-background);
   box-shadow: 0px 4px var(--redekey-shadow);
+  font-weight: 500;
+  transition: all 350ms ease;
 }
 .reset {
   display: flex;
@@ -160,6 +234,8 @@ input {
   box-shadow: 0px 4px var(--redekey-shadow);
   padding-top: 6px;
   cursor: pointer;
+  font-weight: 500;
+  transition: all 350ms ease;
 }
 .equal {
   display: flex;
@@ -174,10 +250,18 @@ input {
   box-shadow: 0px 4px var(--red-shadow);
   padding-top: 6px;
   cursor: pointer;
+  transition: all 350ms ease;
+}
+.theme1 , .theme2 , .theme3{
+  cursor: pointer;
 }
 
 @media (min-width: 360px) {
   .ckeys {
+    width: 56px;
+    height: 50px;
+  }
+  .ckeyso {
     width: 56px;
     height: 50px;
   }
@@ -192,6 +276,10 @@ input {
 }
 @media (min-width: 375px) {
   .ckeys {
+    width: 59px;
+    height: 53px;
+  }
+  .ckeyso {
     width: 59px;
     height: 53px;
   }
@@ -225,6 +313,12 @@ input {
     margin: 12px;
     font-size: 1.8rem;
   }
+  .ckeyso {
+    width: 102px;
+    border-radius: 10px;
+    margin: 12px;
+    font-size: 1.8rem;
+  }
   #del {
     font-size: 1.08rem
   }
@@ -241,6 +335,7 @@ input {
   }
   #calc__no {
     font-size: 2.65rem;
-    padding-top: 35px;
+  
+    top:0;
   }
 }
