@@ -110,7 +110,7 @@ let delLastLetter = () => {
 let calculate = () => {
   //Calculation
   const formatter = new Intl.NumberFormat("en");
-  const output = eval(calcScreen.innerHTML);
+  const output = eval(calcScreen.innerHTML.replace(/,/g , ''));
   calcScreen.innerHTML = formatter.format(output);
   //  0 / any number
   if (calcScreen.innerHTML === "∞") {
